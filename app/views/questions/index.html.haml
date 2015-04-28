@@ -1,6 +1,7 @@
 %h2 Questions Index
-- @questions.each do |question|
-  = question.body
+- @questions.each_with_index do |question, index|
+  %h3
+    = link_to "#{index + 1}: #{question.body}", question_path(question)
 
 = link_to "New Question", new_question_path
 

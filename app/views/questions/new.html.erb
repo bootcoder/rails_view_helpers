@@ -1,1 +1,7 @@
 <h2>New Question View</h2>
+
+<%= form_for @question do |f| %>
+  <%= f.label "Question Body" %>
+  <%= f.text_field :body %>
+  <%= f.submit %>
+<% end %>

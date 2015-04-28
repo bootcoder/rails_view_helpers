@@ -26,9 +26,14 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    p params
     @question = Question.where(id: params[:id]).first
     @question.update_attributes(question_params)
+    redirect_to root_path
+  end
+
+  def delete
+    @question = Question.where(id: params[:id]).first
+    @question.destroy
     redirect_to root_path
   end
 

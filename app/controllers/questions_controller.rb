@@ -31,7 +31,7 @@ class QuestionsController < ApplicationController
     redirect_to root_path
   end
 
-  def delete
+  def destroy
     @question = Question.where(id: params[:id]).first
     @question.destroy
     redirect_to root_path

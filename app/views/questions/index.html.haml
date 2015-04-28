@@ -4,4 +4,5 @@
     = link_to "#{index + 1}: #{question.body}", question_path(question)
 
 = link_to "New Question", new_question_path
-
+= button_to "standard path - New Question", new_question_path #this gives an error because the default action of button_to is a post route
+= button_to "Get path - New Question", new_question_path, method: :get

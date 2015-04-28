@@ -7,6 +7,8 @@
 %p
   = "Updated #{time_ago_in_words(@question.updated_at)} ago."
 %p
+  = "Answers Count: #{@answers.count}"
+%p
   = link_to "Edit", edit_question_path(@question.id)
   •
   = link_to "Delete", { action: :destroy, id: @question.id }, method: :delete, data: { confirm: "Are you sure?" }

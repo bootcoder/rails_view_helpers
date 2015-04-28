@@ -19,6 +19,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.where(id: params[:id]).first
+    @answers = @question.answers
   end
 
   def edit

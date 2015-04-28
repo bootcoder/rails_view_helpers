@@ -38,3 +38,30 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+group :production  do
+  gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'capistrano-rails'
+  # gem 'debugger'
+  gem 'pry'
+  gem 'rspec-rails', '=2.14'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'launchy'
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+  gem 'guard-spork'
+  gem 'ruby_gntp'
+  gem 'spork', :github => 'sporkrb/spork'
+  gem 'spork-rails', :github => 'sporkrb/spork-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+end

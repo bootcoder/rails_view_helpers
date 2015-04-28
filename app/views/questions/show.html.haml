@@ -1,0 +1,12 @@
+%h1 Question Show View
+
+%h2
+  = @question.body
+%h3
+  %p
+    = "Created #{time_ago_in_words(@question.created_at)} ago."
+  %p
+
+    = "Updated #{time_ago_in_words(@question.updated_at)} ago."
+
+= link_to "Home", root_path

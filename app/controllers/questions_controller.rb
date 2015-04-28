@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-    @quesion = Question.where(id: params[:id])
+    @question = Question.where(id: params[:id]).first
   end
 
   private

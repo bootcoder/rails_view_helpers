@@ -1,5 +1,7 @@
 <%= form_for [@question, @answer] do |f| %>
   <%= f.label "Answer Body" %>
   <%= f.text_field :body %>
+  <%= f.label "Correct" %>
   <%= f.check_box :correct %>
+  <%= f.submit %>
 <% end %>

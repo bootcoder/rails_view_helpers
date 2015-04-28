@@ -21,6 +21,10 @@ class QuestionsController < ApplicationController
     @question = Question.where(id: params[:id]).first
   end
 
+  def edit
+    @quesion = Question.where(id: params[:id])
+  end
+
   private
 
   def question_params

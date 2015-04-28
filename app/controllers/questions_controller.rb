@@ -25,6 +25,13 @@ class QuestionsController < ApplicationController
     @question = Question.where(id: params[:id]).first
   end
 
+  def update
+    p params
+    @question = Question.where(id: params[:id]).first
+    @question.update_attributes(question_params)
+    redirect_to root_path
+  end
+
   private
 
   def question_params
